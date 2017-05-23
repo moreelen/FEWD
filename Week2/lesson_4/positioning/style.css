@@ -1,0 +1,38 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.clearfix:before, .clearfix:after {
+  content: '';
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+section{
+	border: 5px solid black;
+	padding: 20px;
+}
+
+section div{
+
+}
+
+section div:nth-child(1){
+	background-color: yellow;
+	float: left;
+	height: 300px;
+	width: 300px;
+}
+
+section div:nth-child(2){
+	background-color: green;
+	float: left;
+	height: 300px;
+	width: 300px;
+}
+
+section div#footer{
+	clear: both;
+}

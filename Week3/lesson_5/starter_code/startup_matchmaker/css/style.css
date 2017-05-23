@@ -1,0 +1,205 @@
+/* Setup */
+@import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700%7COswald:700%7CMerriweather:700,700italic');
+
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+.clearfix {
+  overflow: auto;
+  zoom: 1;
+}
+
+/* Main styles */
+body{
+  color: black;
+  background-color: black;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.margin{
+  max-width: 800px;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+header{
+  color: white;
+  background-color: black;
+  border-width: 0px 0px 5px 0px;
+  border-color: yellow;
+  border-style: solid;
+}
+
+h1{
+  color: yellow;
+  display: inline;
+  float: left;
+  font-family: 'Merriweather', serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+header ul{
+  display: inline;
+  float: right;
+}
+
+header li{
+  display: inline;
+  line-height: 24px;
+  padding: 14px;
+}
+
+header h1 a{
+  color: yellow;
+  font-family: 'Merriweather', serif;
+  text-transform: none;
+}
+
+header li a{
+  color: white;
+}
+
+.bold{
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+#tagline{
+  background-color: #C6C6C6;
+}
+
+h2{
+  font-family: 'Merriweather', serif;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 700;
+  text-align: center;
+}
+
+s{
+  color: grey;
+}
+
+u{
+  text-decoration: none;
+  border-bottom-style: solid;
+  border-bottom-color: yellow;
+  border-bottom-width: 3px;
+}
+
+#image{
+  width: 100%;
+  background: url(../images/coworking.jpg) no-repeat center center;
+  background-size: cover;
+  box-shadow: inset 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+}
+
+#float{
+  float: right;
+  max-width: 400px;
+  padding: 30px;
+  margin: 20px;
+  background-color: rgba(255,255,255,.8);
+  box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+}
+
+h3{
+  font-weight: 700;
+  font-size: 20px;
+  padding-bottom: 14px;
+}
+
+button{
+  width: 100%;
+  background-color: yellow;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 14px;
+  margin-top: 20px;
+  border-radius: 5px;
+  border-width: 0px;
+  box-shadow: inset 0px -9px 0px -6px rgba(0,0,0,0.3);
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+}
+
+#options{
+  width: 100%;
+  background-color: white;
+}
+
+#options li{
+  display: inline;
+  width: 33.33%;
+  float: left;
+  padding: 20px;
+}
+
+#options li:nth-child(2){
+  border-right-style: solid;
+  border-left-style: solid;
+  border-width: 1px;
+  border-color: #C6C6C6;
+}
+
+h4{
+  font-family: 'Merriweather', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  padding-bottom: 14px;
+}
+
+footer{
+  background-color: black;
+  color: white;
+  vertical-align: bottom;
+}
+
+/* Other pages */
+#content{
+  background-color: white;
+}
+
+#search{
+  background-color: #C6C6C6;
+}
+
+.person{
+  background-color: white;
+  margin: 3px;
+  padding: 5px;
+  display: inline;
+  float: left;
+}
+
+.person p{
+  font-family: 'Sans Pro', sans-serif;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.picture{
+  width: 180px;
+  height: 180px;
+}
+
+.skills li{
+  display: inline;
+  background-color: grey;
+  color: white;
+  font-family: 'Sans Pro', sans-serif;
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 12px;
+}

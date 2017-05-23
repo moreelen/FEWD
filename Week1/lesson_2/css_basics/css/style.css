@@ -1,0 +1,40 @@
+body{
+	background-color: teal;
+}
+
+li{
+	background-color: gold;
+}
+
+li:hover{
+	background-color: blanchedalmond;
+}
+
+li:nth-child(3){ background-color: black; }
+
+ol li{
+	font-size: 30px;
+}
+
+a{
+	color: lightgoldenrodyellow;
+}
+
+a:visited{
+	color: goldenrod;
+}
+
+#list-a{ background-color: yellow; }
+#list-b{ background-color: cyan; }
+
+#square-a{	background-color: blanchedalmond; }
+#square-b{	background-color: honeydew; }
+#square-c{	background-color: navajowhite; }
+#square-d{	background-color: lightgoldenrodyellow; }
+
+.square{
+	width: 150px;
+	height: 150px;
+}
+
+.bordered{ border: 5px Gainsboro ridge; }
