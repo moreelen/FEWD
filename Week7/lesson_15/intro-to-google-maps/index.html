@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+
+  <!-- Grabbed from Google Maps APIs Guids plus the API key generated in Google APIs.
+  Sensor false means it won't be used in touch screens and
+  libraries means we are just grabbing places but we can grab other things like traffic. -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAbDR53qC3ga4-lvneYkM-j9jk9gPz8nk&libraries=places"></script>
+
+  <script type="text/javascript" src="./scripts/script.js"></script>
+  
+  <!-- Basic alphabet is anglified. It doesn't have accents.
+  This is why we call utf-8. It brings in those characters. -->
+  <meta charset="utf-8">
+  <style type="text/css">
+    #googleMap{
+      width: 100%;
+      height: 500px;
+    }
+  </style>
+
+  <title></title>
+</head>
+<body>
+  <div class="row">
+    <input type="text" name="" id="searchbox" value="" class="col l12">
+  </div>
+  <div class="row">
+    <div class="col l6">
+      <div id="googleMap"></div>
+    </div>
+    <div class="col l6">
+      <button type="button" id="whereami" class="btn">Find my position.</button>
+    </div>
+  </div>
+</body>
+</html>

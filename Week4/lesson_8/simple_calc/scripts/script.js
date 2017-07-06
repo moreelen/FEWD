@@ -1,4 +1,4 @@
-alert("Welcome to the simple calculator.")
+a alert("Welcome to the simple calculator.")
 
 var a = parseInt(prompt("Give me your first number."));
 var b = parseInt(prompt("Give me your second number."));

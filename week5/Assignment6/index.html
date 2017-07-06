@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tic Tac Toe</title>
+  <script type="text/javascript" src="./scripts/script.js"></script>
+  <style type="text/css">
+    li{
+      width: 200px;
+      height: 200px;
+      border: 1px solid black;
+      float: left;
+      box-sizing: border-box;
+      font-size: 170px;
+      text-align: center;
+      line-height: 200px;
+    }
+
+    ul{
+      list-style: none;
+      padding: 0px;
+    }
+
+    #grid{
+      width: 600px;
+      margin: auto;
+    }
+
+    #message{
+      text-align: center;
+      font-size: 30px;
+      font-family: arial;
+      color: darkred;
+    }
+
+    #restart{
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="message"></div>
+  <button id="restart">New Game</button>
+  <div id="grid">
+   <ul>
+     <li id="cell_0"></li>
+     <li id="cell_1"></li>
+     <li id="cell_2"></li>
+   </ul>
+   <ul>
+     <li id="cell_3"></li>
+     <li id="cell_4"></li>
+     <li id="cell_5"></li>
+   </ul>
+   <ul>
+     <li id="cell_6"></li>
+     <li id="cell_7"></li>
+     <li id="cell_8"></li>
+   </ul>
+  </div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Forms</title>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('select').material_select();
+    });
+  </script>
+
+</head>
+<body>
+ <h1>Forms</h1>
+ <div class="container">
+  <!-- Everything must be in the tag form. There can never be a form inside a form.
+  You always need two attributes in the form tag. Action is where the data will be sent.
+  There are two types of requests. POST and GET. They're what we call HTTP verbs.
+  Get is a call to receive data. Post is to send data.
+  When we have a GET in a form, the text is used in the URL. Example: Amazon.
+  It adds it to the URL so you can send it to friends and show them what you are looking at.
+  That is the only difference between POST and GET. -->
+  <form action="http://www.hashemian.com/tools/form-post-tester.php" method="POST">
+    <label for="input-1">This is a text input</label>
+    <!-- Type the sort of data we expect the user to type.
+    Name is what will be sent to the server. Like in jSON the key.
+    For looks at the id. It will automatically put the cursor on the right box. -->
+    <input type="text" name="input-1" id="input-1" placeholder="This is a text input." required value="bonjour">
+    <!-- Never have an email in the HTML! Attack of the spam.
+    Name cannot start with a number. Otherwise go crazy.
+    Id is for CSS. Name is for form identification.
+    Requried makes it required. Value automatically adds that value to the field. -->
+    <input type="email" name="input-2">
+    <!-- Name is like the id. Never have it the same. Otherwise it will always grab the last one.
+    Never trust the user. The user might be stupid. Spend a lot of time with data validation. -->
+    <input type="password" name="pw-1">
+    <!-- Go to chrome dev tools and change the password to text. Viola! Hacker!
+    Also look at sql injetions. Delete entire website databases just with the URL. -->
+    <input type="date" name="date-1">
+    <!-- Fieldset is the different chapters of a form. -->
+    <fieldset>
+      <legend>Radio Buttons</legend>
+      <input type="radio" name="color-choice" value="blue" id="radio-1">
+      <!-- Value makes it actually return that value. -->
+      <label for="radio-1">Blue</label>
+      <br>
+      <input type="radio" name="color-choice" value="red" id="radio-2">
+      <label for="radio-2">Red</label>
+      <br>
+      <input type="radio" name="color-choice" value="black" id="radio-3">
+      <label for="radio-3">Black</label>
+      <br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Radio Buttons</legend>
+      <input type="checkbox" name="color-choice" value="blue" id="cb-1">
+      <label for="cb-1">Blue</label>
+      <br>
+      <input type="checkbox" name="color-choice" value="red" id="cb-2">
+      <label for="cb-2">Red</label>
+      <br>
+      <input type="checkbox" name="color-choice" value="black" id="cb-3">
+      <label for="cb-3">Black</label>
+      <br>
+    </fieldset>
+
+    <textarea name="long-text">Some text here.</textarea>
+
+    <select name="students">
+      <option value="Luke">Luke</option>
+      <option value="Luke">Rosa</option>
+      <option value="Luke">Ali</option>
+    </select>
+
+    <button>Send the thingy</button>
+    <!-- If you have a button inside a form it will automatically submit. -->
+  </form>
+ </div>
+</body>
+</html>

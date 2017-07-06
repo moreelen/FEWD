@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+
+  <script type="text/javascript">
+    window.onload = function(){
+      var square = document.getElementById("square-1");
+      var marginLeft = 0;
+      // Repeat code every certain number of seconds.
+      setInterval(function(){
+        square.style.marginLeft = marginLeft+"px" // Set the css property to marginLeft.
+        marginLeft++; // Increment by one.
+      }, 100); // The function then the frequency intervals that you want to repeat that function in ms.
+    
+      setTimeout(function(){
+        console.log("10 sec since page load"); // Other way of doing animations.
+      }, 10000) // Will be executed once after a certain time. In thise case after 10000ms
+    }
+  </script>
+
+  <style type="text/css">
+    #square-1{
+      width: 100px;
+      height: 100px;
+      background-color: green;
+      margin-left: 0px; /* Where we start the animation */
+    }
+  </style>
+
+</head>
+<body>
+  <div id="square-1"></div>
+</body>
+</html>

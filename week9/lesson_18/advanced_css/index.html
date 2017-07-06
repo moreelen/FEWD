@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+
+  <style type="text/css">
+    .square{
+      width: 100px;
+      height: 100px;
+      background-color: green;
+      margin: 10px; /* Where we start the animation */
+      transition: transform 0.6s cubic-bezier(0,0,1,1);
+      /* Every time there is a transform, do a transition.
+      I want it to happen in 0.6 seconds.
+      And the type of animation speed I would like. */
+    }
+
+    #square-1:hover{
+      transform: rotate(45deg);
+    }
+
+    #square-2:hover{
+      transform: rotate(45deg);
+      transform-origin: 100% 0; /* Changes the origin of where the rotation happens */
+    }
+
+    #square-3:hover{
+      transform: scale(0.6);
+    }
+
+    #square-4:hover{
+      transform: translate(50%, -75%); /* Moves the element somewhere else */
+    }
+
+    #square-5:hover{
+      transform: perspective(100px) rotateY(45deg); /* So we can see the animation we add rotate. */
+    }
+
+    #square-6:hover{
+      transform: perspective(200px) translateZ(-100px);
+    }
+
+    @keyframes move{
+      0%{ margin: 0; } /* At time 0% it should be margin 0. */
+      6%{ margin-left: 100px }
+      20%{ margin-left: 100px }
+      25%{ transform: rotate(45deg); }
+    }
+
+    #square-7{
+      animation: move 3s infinite; /* Move can really be called anything because it's a name call like a function name. */
+    }
+  </style>
+
+</head>
+<body>
+  <div id="square-1" class="square"></div>
+  <div id="square-2" class="square"></div>
+  <div id="square-3" class="square"></div>
+  <div id="square-4" class="square"></div>
+  <div id="square-5" class="square"></div>
+  <div id="square-6" class="square"></div>
+  <div id="square-7" class="square"></div>
+</body>
+</html>

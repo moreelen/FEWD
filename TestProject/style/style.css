@@ -1,0 +1,26 @@
+/* STANDARDISE */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.clearfix:before, .clearfix:after {
+  content: '';
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+/* START STYLING */
+#map {
+  height: 500px;
+  width: 80%;
+  float: left;
+}
+
+#side-banner {
+  background-color: #243242;
+  height: 100%;
+  width: 20%;
+  float: left;
+}
