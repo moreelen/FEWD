@@ -9,7 +9,7 @@ $(function(){
   var long = -0.3657;
 
   // Initialise first API call.
-  var demoUrl = "https://crossorigin.me/https://api.darksky.net/forecast/ca170dd6d6dd57c911eb64a2bd625869/39.4742,-0.3657," + time + "?units=si";
+  var demoUrl = "https://api.darksky.net/forecast/ca170dd6d6dd57c911eb64a2bd625869/39.4742,-0.3657," + time + "?units=si";
 
   // Add search box to look through places.
   var searchInput = $("#searchbox");
@@ -26,7 +26,7 @@ $(function(){
         console.log(data);
 
         // CLOUD COVER AND SPEEDCODE
-        
+
         // Create style tag with jQuery in which we will add the animation keyframes.
         $("head").append("<style></style>");
 
@@ -62,21 +62,21 @@ $(function(){
 
 
         // SUNRISE AND SUNSET CODE
-  
+
         // Grab sunrise and sunset times and turn it into workable numbers.
         var sunriseTime = new Date(data.daily.data[0].sunriseTime * 1000);
-  
+
         var sunriseHour = sunriseTime.getHours();
         var sunriseMinute = sunriseTime.getMinutes();
-  
+
         var sunriseColour = parseInt( 255 * ( ((sunriseHour * 100) + sunriseMinute) / 1500) );
         console.log("Sunrise Colour" + sunriseColour);
-  
+
         var sunsetTime = new Date(data.daily.data[0].sunsetTime * 1000);
-        
+
         var sunsetHour = sunsetTime.getHours();
         var sunsetMinute = sunsetTime.getMinutes();
-  
+
         var sunsetColour = parseInt( 255 * ( ( ((sunsetHour * 100) + sunsetMinute) - 1200) / 1200));
 
         console.log("Sunset Colour" + sunsetColour);
@@ -109,7 +109,7 @@ $(function(){
         // HUMIDITY CODE
 
         var humidity = data.currently.humidity;
-  
+
         // Add sunrise/sunset as gradient and humidity as opacity.
         $("#art").css("background", "linear-gradient(" + (Math.floor(Math.random() * 359) + 1) + "deg, rgba(" + RCR + "," + RCG + "," + sunriseColour + "," + humidity + "), rgba(" + SCR + "," + SCG + "," + sunsetColour + "," + humidity + "))")
       }
@@ -129,8 +129,8 @@ $(function(){
     lat = place.geometry.location.lat();
     long = place.geometry.location.lng();
 
-    demoUrl = "https://crossorigin.me/https://api.darksky.net/forecast/ca170dd6d6dd57c911eb64a2bd625869/" + lat + "," + long + "," + time + "?units=si";
-    
+    demoUrl = "https://api.darksky.net/forecast/ca170dd6d6dd57c911eb64a2bd625869/" + lat + "," + long + "," + time + "?units=si";
+
     // And generate the new graphics again.
     graphics();
   });
