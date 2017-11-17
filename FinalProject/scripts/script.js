@@ -9,7 +9,7 @@ $(function(){
   var long = -0.3657;
 
   // Initialise first API call.
-  var demoUrl = "https://api.darksky.net/forecast/ca170dd6d6dd57c911eb64a2bd625869/39.4742,-0.3657," + time + "?units=si";
+  var demoUrl = "https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/ca170dd6d6dd57c911eb64a2bd625869/39.4742,-0.3657," + time + "?units=si";
 
   // Add search box to look through places.
   var searchInput = $("#searchbox");
@@ -129,7 +129,7 @@ $(function(){
     lat = place.geometry.location.lat();
     long = place.geometry.location.lng();
 
-    demoUrl = "https://api.darksky.net/forecast/ca170dd6d6dd57c911eb64a2bd625869/" + lat + "," + long + "," + time + "?units=si";
+    demoUrl = "https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/ca170dd6d6dd57c911eb64a2bd625869/" + lat + "," + long + "," + time + "?units=si";
 
     // And generate the new graphics again.
     graphics();
